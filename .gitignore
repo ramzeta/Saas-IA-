@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+.vercel
+.turbo
+coverage/
+*.tsbuildinfo
+
+# Renders y material pesado
+*.mp4
+*.mov
+*.wav
+*.exr
+renders/

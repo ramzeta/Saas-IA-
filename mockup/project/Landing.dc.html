@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>VibeFilm — habla, se rueda</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+body { margin: 0; background: #0B0C0F; color: #EDEFF3; font-family: 'DM Sans', system-ui, sans-serif; }
+a { color: #5FD3C6; text-decoration: none; }
+a:hover { color: #93E4DB; }
+button { font-family: inherit; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0B0C0F">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; padding: 18px 48px; border-bottom: 1px solid #1B1E25">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="width: 30px; height: 30px; border-radius: 8px; background: #5FD3C6; color: #0B0C0F; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px">VF</div>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px">VibeFilm</span>
+    </div>
+    <nav style="display: flex; flex-wrap: wrap; gap: 22px; margin-left: auto; font-size: 13.5px">
+      <a href="#como" style="color: #C9CFDA">Cómo funciona</a>
+      <a href="#precios" style="color: #C9CFDA">Precios</a>
+      <a href="Main.dc.html" style="color: #C9CFDA">Ver el estudio</a>
+    </nav>
+    <div style="display: flex; gap: 10px">
+      <a href="Main.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 15px; border: 1px solid #272B34; border-radius: 9px; color: #EDEFF3; font-size: 13.5px">Entrar</a>
+      <a href="Main.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 17px; border-radius: 9px; background: #5FD3C6; color: #0B0C0F; font-size: 13.5px; font-weight: 500">Empezar gratis</a>
+    </div>
+  </header>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 68px 48px 56px; display: flex; flex-wrap: wrap; gap: 44px; align-items: center">
+    <div style="flex: 999 1 460px; min-width: 0">
+      <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid #272B34; border-radius: 999px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #98A2B3">Sin tarjeta · 400 créditos de regalo</span>
+      <h1 style="margin: 20px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 62px; line-height: 1.02; font-weight: 700; letter-spacing: -0.03em">Habla.<br>Se rueda.</h1>
+      <p style="margin: 22px 0 0; max-width: 54ch; font-size: 17px; line-height: 1.6; color: #C9CFDA">Cuenta el corto que quieres. Un agente escribe el guion, fija a los personajes, genera los planos y te los monta. Cambias una frase y solo se vuelve a renderizar <em>ese</em> plano.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px">
+        <a href="Main.dc.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 10px; background: #5FD3C6; color: #0B0C0F; font-size: 15px; font-weight: 500">Crear mi primer corto</a>
+        <a href="Storyboard.dc.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border: 1px solid #272B34; border-radius: 10px; color: #EDEFF3; font-size: 15px">Ver un proyecto real</a>
+      </div>
+      <p style="margin: 18px 0 0; font-size: 12.5px; color: #98A2B3">Kling 3.0 · Veo 3.1 · LTX-2 · ElevenLabs. Los modelos cambian; tu proyecto no.</p>
+    </div>
+
+    <div style="flex: 1 1 380px; min-width: 340px; border: 1px solid #272B34; border-radius: 14px; background: #101217; padding: 16px">
+      <div style="display: flex; gap: 11px; margin-bottom: 13px">
+        <div aria-hidden="true" style="flex: 0 0 26px; width: 26px; height: 26px; border-radius: 7px; background: #1F2A2A; color: #5FD3C6; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px">◆</div>
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #DDE2EA">«El plano 4 en contrapicado y que llueva mucho más fuerte.»</p>
+      </div>
+      <div style="border: 1px solid #5FD3C6; border-radius: 11px; background: #11181A; overflow: hidden">
+        <div style="padding: 10px 14px; border-bottom: 1px solid #22323380; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #5FD3C6">diff · film.json · v12 → v13</div>
+        <pre style="margin: 0; padding: 13px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 1.8; color: #C9CFDA; white-space: pre-wrap">shot_04:
+<span style="color: #F0874F">-  angle: "eye-level"</span>
+<span style="color: #5FD3C6">+  angle: "low angle, 24mm"</span>
+<span style="color: #5FD3C6">+  weather: "heavy rain, backlit"</span></pre>
+        <div style="padding: 11px 14px; border-top: 1px solid #22323380; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #98A2B3">1 plano a renderizar · <span style="color: #F0874F">56 créditos</span> · 11 planos intactos</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" style="max-width: 1200px; margin: 0 auto; padding: 18px 48px 56px">
+    <h2 style="margin: 0 0 24px; font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #98A2B3">Cómo funciona</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+      <sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+        <article style="border: 1px solid #272B34; border-radius: 13px; background: #14161B; padding: 22px">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5FD3C6; margin-bottom: 12px">{{s.num}}</div>
+          <h3 style="margin: 0 0 9px; font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700">{{s.title}}</h3>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #98A2B3">{{s.body}}</p>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 48px 60px">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; border: 1px solid #272B34; border-radius: 14px; background: #101217; padding: 30px 32px">
+      <div style="flex: 999 1 420px; min-width: 0">
+        <h2 style="margin: 0 0 10px; font-family: 'Space Grotesk', sans-serif; font-size: 27px; font-weight: 700; letter-spacing: -0.02em">Iterar no debería costar un corto nuevo</h2>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #C9CFDA; max-width: 58ch">Tu proyecto es un documento, no un vídeo. Cuando pides un cambio, el agente lo aplica sobre ese documento y marca exactamente qué planos quedan inválidos. Lo demás no se vuelve a pagar.</p>
+      </div>
+      <div style="flex: 1 1 340px; min-width: 320px; display: flex; flex-direction: column; gap: 11px">
+        <div style="padding: 14px 16px; border: 1px solid #272B34; border-radius: 10px; background: #14161B">
+          <div style="font-size: 12.5px; color: #98A2B3; margin-bottom: 7px">Cambiar un plano regenerando la secuencia</div>
+          <div style="display: flex; align-items: center; gap: 11px">
+            <span style="flex: 1; height: 16px; border-radius: 2px 5px 5px 2px; background: #3A4150"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C9CFDA">672 cr</span>
+          </div>
+        </div>
+        <div style="padding: 14px 16px; border: 1px solid #5FD3C6; border-radius: 10px; background: #11181A">
+          <div style="font-size: 12.5px; color: #98A2B3; margin-bottom: 7px">Cambiarlo en VibeFilm</div>
+          <div style="display: flex; align-items: center; gap: 11px">
+            <span style="flex: 0 0 8.3%; height: 16px; border-radius: 2px 5px 5px 2px; background: #5FD3C6"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5FD3C6">56 cr</span>
+            <span style="flex: 1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" style="max-width: 1200px; margin: 0 auto; padding: 0 48px 54px">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px; margin-bottom: 22px">
+      <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 27px; font-weight: 700; letter-spacing: -0.02em">Precios</h2>
+      <p style="margin: 0; font-size: 13.5px; color: #98A2B3">Créditos prepago. Los previews no gastan apenas; el render final te dice lo que cuesta antes de lanzarse.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+      <sc-for list="{{plans}}" as="p" hint-placeholder-count="3">
+        <article style="{{p.cardStyle}}">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 9px">
+            <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 700">{{p.name}}</h3>
+            <span style="{{p.tagStyle}}">{{p.tag}}</span>
+          </div>
+          <div style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 32px; color: #EDEFF3">{{p.price}}<span style="font-size: 13px; color: #98A2B3">{{p.period}}</span></div>
+          <p style="margin: 8px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #F0874F">{{p.credits}}</p>
+          <p style="margin: 5px 0 0; font-size: 12.5px; color: #98A2B3">{{p.minutes}}</p>
+          <ul style="margin: 17px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: #C9CFDA">
+            <sc-for list="{{p.features}}" as="f" hint-placeholder-count="4">
+              <li>{{f.text}}</li>
+            </sc-for>
+          </ul>
+          <a href="Main.dc.html" style="{{p.ctaStyle}}">{{p.cta}}</a>
+        </article>
+      </sc-for>
+    </div>
+    <p style="margin: 18px 0 0; font-size: 13px; color: #98A2B3">Créditos extra cuando se acaban: 1.000 por 39 $, sin caducidad. Para productoras y agencias con factura y SSO, <a href="Main.dc.html">hablamos</a>.</p>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 48px 54px">
+    <div style="border: 1px solid #272B34; border-left: 3px solid #F0874F; border-radius: 13px; background: #14161B; padding: 24px 26px">
+      <h2 style="margin: 0 0 12px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700">Lo que hace falta decir antes de que pagues</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; font-size: 13px; line-height: 1.6; color: #98A2B3">
+        <p style="margin: 0"><strong style="color: #DDE2EA; font-weight: 500">Derechos comerciales</strong> desde el plan Creator, con el alcance del modelo más restrictivo que use cada plano. El export registra cuál fue.</p>
+        <p style="margin: 0"><strong style="color: #DDE2EA; font-weight: 500">La música generada</strong> vale para el corte de trabajo. Para publicar con monetización te cambiamos el cue por una pista ya licenciada.</p>
+        <p style="margin: 0"><strong style="color: #DDE2EA; font-weight: 500">No generamos personas reales.</strong> Las referencias que reproduzcan a alguien identificable o a menores se rechazan antes de encolar nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #1B1E25">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 26px 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px">
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px">VibeFilm</span>
+      <span style="font-size: 12.5px; color: #98A2B3">Hecho en Madrid. Facturación en euros con IVA.</span>
+      <nav style="margin-left: auto; display: flex; flex-wrap: wrap; gap: 20px; font-size: 12.5px">
+        <a href="#precios" style="color: #98A2B3">Precios</a>
+        <a href="Creditos.dc.html" style="color: #98A2B3">Cómo funcionan los créditos</a>
+        <a href="Timeline.dc.html" style="color: #98A2B3">Procedencia y C2PA</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#5FD3C6","options":["#5FD3C6","#F0874F","#8AA4FF","#EDEFF3"]},"$preview":{"width":1440,"height":1600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var accent = this.props.accent || '#5FD3C6';
+    var steps = [
+      { num: '01', title: 'Lo cuentas', body: 'Un párrafo basta. El agente devuelve beats, duraciones y una shot list con lente, ángulo y movimiento por plano. Lo revisas como revisarías un guion técnico.' },
+      { num: '02', title: 'Lo ves barato', body: 'Previews a 480p de los doce planos por menos de lo que cuesta uno final. Iteras ahí hasta que el corte funciona, sin quemar créditos.' },
+      { num: '03', title: 'Lo rematas', body: 'Solo los planos aprobados pasan a 1080p. Diálogo, efectos y música se montan encima y sale un MP4 con subtítulos y versión vertical.' }
+    ];
+    var cardBase = 'border-radius: 13px; padding: 24px; display: flex; flex-direction: column; background: #14161B;';
+    var ctaBase = 'display: inline-flex; align-items: center; justify-content: center; min-height: 46px; margin-top: 20px; border-radius: 9px; font-size: 13.5px; font-weight: 500;';
+    var tagBase = 'padding: 3px 9px; border-radius: 999px; font-family: \'IBM Plex Mono\', monospace; font-size: 10.5px;';
+    var plans = [
+      {
+        name: 'Free', tag: 'para probar', price: '0 $', period: '', credits: '400 créditos, una vez',
+        minutes: '≈ 25 s de vídeo final, o muchos previews',
+        features: [{ text: 'Previews en LTX-2 Fast' }, { text: 'Un proyecto activo' }, { text: 'Marca de agua' }, { text: 'Sin uso comercial' }],
+        cta: 'Empezar sin tarjeta', featured: false
+      },
+      {
+        name: 'Creator', tag: 'el habitual', price: '29 $', period: ' / mes', credits: '1.000 créditos al mes',
+        minutes: '≈ 45 s de vídeo final al mes',
+        features: [{ text: 'Previews ilimitados' }, { text: 'Kling 3.0 y LTX-2' }, { text: 'Derechos comerciales' }, { text: 'Export 16:9 y 9:16' }],
+        cta: 'Elegir Creator', featured: true
+      },
+      {
+        name: 'Pro', tag: 'para producir', price: '99 $', period: ' / mes', credits: '3.300 créditos al mes',
+        minutes: '≈ 2,3 min de vídeo final al mes',
+        features: [{ text: 'Veo 3.1 y Kling 3.0 Pro' }, { text: 'Sin marca de agua' }, { text: '3 colaboradores' }, { text: 'Stems de audio y SRT' }],
+        cta: 'Elegir Pro', featured: false
+      }
+    ];
+    plans = plans.map(function (p) {
+      return {
+        name: p.name, tag: p.tag, price: p.price, period: p.period, credits: p.credits,
+        minutes: p.minutes, features: p.features, cta: p.cta,
+        cardStyle: cardBase + (p.featured ? ' border: 1px solid ' + accent + ';' : ' border: 1px solid #272B34;'),
+        tagStyle: tagBase + (p.featured
+          ? ' background: rgba(95,211,198,0.16); color: ' + accent + ';'
+          : ' background: #272B34; color: #C9CFDA;'),
+        ctaStyle: ctaBase + (p.featured
+          ? ' background: ' + accent + '; color: #0B0C0F;'
+          : ' border: 1px solid #272B34; color: #EDEFF3;')
+      };
+    });
+    return { steps: steps, plans: plans, accent: accent };
+  }
+}
+</script>
+</body>
+</html>

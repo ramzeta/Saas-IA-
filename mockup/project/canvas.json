@@ -1,0 +1,21 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-08T09:10:00Z" },
+  "title": "VibeFilm — SaaS mockup",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1440, "h": 920, "title": "Estudio — chat agéntico", "expand": "fill", "is_interactive": true },
+    "Storyboard.dc.html": { "x": 1520, "y": 0, "w": 1440, "h": 920, "title": "Storyboard & shot list", "expand": "fill", "is_interactive": true },
+    "Personajes.dc.html": { "x": 3040, "y": 0, "w": 1440, "h": 920, "title": "Character bible", "expand": "fill", "is_interactive": true },
+    "Timeline.dc.html": { "x": 0, "y": 1300, "w": 1440, "h": 920, "title": "Ensamblado y export", "expand": "fill", "is_interactive": true },
+    "Creditos.dc.html": { "x": 1520, "y": 1300, "w": 1440, "h": 920, "title": "Créditos y unidad económica", "expand": "fill", "is_interactive": true },
+    "Landing.dc.html": { "x": 3040, "y": 1300, "w": 1440, "h": 1600, "title": "Landing + pricing", "expand": "fill", "is_interactive": true }
+  },
+  "order": ["Main.dc.html", "Storyboard.dc.html", "Personajes.dc.html", "Timeline.dc.html", "Creditos.dc.html", "Landing.dc.html"],
+  "notes": {
+    "r1": { "x": 0, "y": -300, "text": "El estudio: hablas, el agente produce", "kind": "title1", "maxW": 4480 },
+    "r2": { "x": 0, "y": 1000, "text": "Ensamblado, dinero y captación", "kind": "title1", "maxW": 4480 }
+  },
+  "designSystems": []
+}

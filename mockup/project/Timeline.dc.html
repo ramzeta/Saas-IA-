@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Montaje y export — VibeFilm</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+body { margin: 0; background: #0B0C0F; color: #EDEFF3; font-family: 'DM Sans', system-ui, sans-serif; }
+a { color: #5FD3C6; text-decoration: none; }
+a:hover { color: #93E4DB; }
+button { font-family: inherit; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0B0C0F; display: flex; flex-direction: column">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 14px 24px; border-bottom: 1px solid #272B34; background: #101217">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="width: 30px; height: 30px; border-radius: 8px; background: #5FD3C6; color: #0B0C0F; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px">VF</div>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: -0.01em">VibeFilm</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid #272B34; border-radius: 999px; background: #14161B">
+      <span style="font-size: 13px">Lluvia en Malasaña</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #98A2B3">60 s · v13</span>
+    </div>
+    <nav style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+      <a href="Main.dc.html" style="padding: 10px 14px; border-radius: 8px; color: #98A2B3; font-size: 13px">Estudio</a>
+      <a href="Storyboard.dc.html" style="padding: 10px 14px; border-radius: 8px; color: #98A2B3; font-size: 13px">Storyboard</a>
+      <a href="Personajes.dc.html" style="padding: 10px 14px; border-radius: 8px; color: #98A2B3; font-size: 13px">Personajes</a>
+      <span aria-current="page" style="padding: 10px 14px; border-radius: 8px; background: #1F2A2A; color: #5FD3C6; font-size: 13px; font-weight: 500">Montaje</span>
+      <a href="Creditos.dc.html" style="padding: 10px 14px; border-radius: 8px; color: #98A2B3; font-size: 13px">Créditos</a>
+    </nav>
+    <div aria-hidden="true" style="width: 34px; height: 34px; border-radius: 999px; background: #272B34; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500">RP</div>
+  </header>
+
+  <main style="flex: 1; padding: 22px 24px 28px; display: flex; flex-direction: column; gap: 20px">
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px">
+      <div style="flex: 999 1 520px; min-width: 0; border: 1px solid #272B34; border-radius: 12px; background: #0E1014; overflow: hidden">
+        <div style="aspect-ratio: 16 / 9; min-height: 240px; background: #1B1E25; display: flex; align-items: flex-end; justify-content: space-between; padding: 14px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #98A2B3">corte_v13 · 1920×1080 · 24 fps</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #98A2B3">00:00:21:08</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid #272B34">
+          <button type="button" aria-label="Reproducir el corte" style="width: 44px; height: 44px; border: 0; border-radius: 999px; background: #EDEFF3; color: #0B0C0F; font-size: 14px; cursor: pointer">▶</button>
+          <div style="flex: 999 1 200px; min-width: 0; height: 6px; border-radius: 3px; background: #272B34; overflow: hidden"><div style="width: 35%; height: 100%; background: #5FD3C6"></div></div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #98A2B3">21,3 / 60,0 s</span>
+        </div>
+      </div>
+
+      <section style="flex: 1 1 320px; min-width: 300px; border: 1px solid #272B34; border-radius: 12px; background: #14161B; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700">Exportar</h2>
+        <div style="display: flex; flex-direction: column; gap: 9px">
+          <sc-for list="{{formats}}" as="f" hint-placeholder-count="4">
+            <label style="display: flex; align-items: center; gap: 10px; padding: 11px 12px; border: 1px solid #272B34; border-radius: 9px; background: #101217; font-size: 13px; cursor: pointer">
+              <input type="checkbox" checked="{{f.on}}" style="width: 17px; height: 17px; accent-color: #5FD3C6">
+              <span style="flex: 1">{{f.label}}<span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #98A2B3; margin-top: 2px">{{f.meta}}</span></span>
+            </label>
+          </sc-for>
+        </div>
+        <div style="padding: 11px 12px; border: 1px solid #272B34; border-left: 3px solid #5FD3C6; border-radius: 9px; background: #101217">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #98A2B3; margin-bottom: 4px">Remotion Lambda</div>
+          <div style="font-size: 12.5px; color: #C9CFDA; line-height: 1.5">Ensamblado, rótulos y subtítulos en ~40 s. Sin marca de agua en el plan Pro.</div>
+        </div>
+        <button type="button" style="min-height: 46px; border: 0; border-radius: 9px; background: #5FD3C6; color: #0B0C0F; font-size: 13.5px; font-weight: 500; cursor: pointer">Exportar corte · 30 cr</button>
+      </section>
+    </div>
+
+    <section>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 10px">
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700">Línea de tiempo</h2>
+        <span style="font-size: 12.5px; color: #98A2B3">Generada desde <span style="font-family: 'IBM Plex Mono', monospace">film.json</span>. Tocar un plano aquí reescribe el documento, no el vídeo.</span>
+      </div>
+
+      <div style="border: 1px solid #272B34; border-radius: 12px; background: #0E1014; overflow: hidden">
+        <div style="display: flex; align-items: center; border-bottom: 1px solid #272B34; background: #101217">
+          <span style="flex: 0 0 104px; padding: 8px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #98A2B3">pista</span>
+          <div style="flex: 1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); padding-right: 12px">
+            <sc-for list="{{ruler}}" as="t" hint-placeholder-count="6">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #98A2B3; padding: 8px 0 8px 6px; border-left: 1px solid #272B34">{{t.label}}</span>
+            </sc-for>
+          </div>
+        </div>
+
+        <sc-for list="{{tracks}}" as="tr" hint-placeholder-count="4">
+          <div style="display: flex; align-items: stretch; border-bottom: 1px solid #1B1E25">
+            <div style="flex: 0 0 104px; padding: 12px; border-right: 1px solid #272B34; background: #101217">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #DDE2EA">{{tr.id}}</span>
+              <span style="display: block; font-size: 11px; color: #98A2B3; margin-top: 2px">{{tr.name}}</span>
+            </div>
+            <div style="flex: 1; min-width: 0; display: flex; gap: 3px; padding: 10px 12px 10px 0; align-items: center">
+              <sc-for list="{{tr.clips}}" as="c" hint-placeholder-count="5">
+                <span style="{{c.style}}">{{c.label}}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px">
+      <aside style="flex: 999 1 460px; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid #272B34; border-left: 3px solid #F0874F; border-radius: 10px; background: #14161B">
+        <div style="flex: 999 1 320px; min-width: 0">
+          <h3 style="margin: 0 0 4px; font-size: 13.5px; font-weight: 500">La música necesita licencia aparte</h3>
+          <p style="margin: 0; font-size: 12.5px; color: #98A2B3; line-height: 1.5">El cue generado sirve para el corte de trabajo, pero publicarlo con monetización exige licencia de sincronización. El export avisa y ofrece sustituirlo por una pista de librería ya licenciada.</p>
+        </div>
+        <button type="button" style="min-height: 44px; padding: 0 15px; border: 1px solid #272B34; border-radius: 8px; background: #101217; color: #EDEFF3; font-size: 13px; cursor: pointer">Sustituir cue</button>
+      </aside>
+
+      <section style="flex: 1 1 300px; min-width: 280px; border: 1px solid #272B34; border-radius: 10px; background: #14161B; padding: 14px 16px">
+        <h3 style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #98A2B3">Procedencia</h3>
+        <ul style="margin: 0; padding-left: 17px; font-size: 12.5px; color: #C9CFDA; line-height: 1.7">
+          <li>Metadatos C2PA firmados en cada export</li>
+          <li>Registro de modelo y versión usados por plano</li>
+          <li>Marca de agua en Free y Creator</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#5FD3C6","options":["#5FD3C6","#F0874F","#8AA4FF","#EDEFF3"]},"$preview":{"width":1440,"height":920}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var accent = this.props.accent || '#5FD3C6';
+    var clipBase = 'display: flex; align-items: center; height: 34px; padding: 0 9px; border-radius: 5px; font-family: \'IBM Plex Mono\', monospace; font-size: 10.5px; white-space: nowrap; overflow: hidden;';
+    function clip(label, grow, kind) {
+      var skin = {
+        video: ' background: rgba(95,211,198,0.18); border: 1px solid ' + accent + '; color: #CFF4EF;',
+        pending: ' background: #1B1E25; border: 1px dashed #3A4150; color: #98A2B3;',
+        voice: ' background: rgba(138,164,255,0.16); border: 1px solid #8AA4FF; color: #D3DCFF;',
+        sfx: ' background: rgba(240,135,79,0.14); border: 1px solid #F0874F; color: #F8CDB2;',
+        music: ' background: #272B34; border: 1px solid #3A4150; color: #C9CFDA;'
+      };
+      return { label: label, style: clipBase + ' flex: ' + grow + ' 1 0; min-width: 0;' + (skin[kind] || skin.music) };
+    }
+    var tracks = [
+      { id: 'V1', name: 'vídeo', clips: [clip('01', 5, 'video'), clip('02', 3.5, 'video'), clip('03', 5, 'video'), clip('04', 5, 'video'), clip('05 · en cola', 4, 'pending'), clip('06 · borrador', 4.5, 'pending'), clip('07', 5, 'video')] },
+      { id: 'DIA', name: 'diálogo', clips: [clip('', 8.5, 'music'), clip('vera_01 · ElevenLabs', 6, 'voice'), clip('', 7, 'music'), clip('vera_02', 4, 'voice'), clip('', 6.5, 'music')] },
+      { id: 'SFX', name: 'efectos', clips: [clip('lluvia (loop 30 s)', 14, 'sfx'), clip('pasos', 4, 'sfx'), clip('portal', 3, 'sfx'), clip('tráfico lejano', 11, 'sfx')] },
+      { id: 'MUS', name: 'música', clips: [clip('cue_frio · 60 s · requiere licencia de sync', 32, 'music')] }
+    ];
+    var ruler = [0, 10, 20, 30, 40, 50].map(function (s) { return { label: '00:' + (s < 10 ? '0' + s : s) }; });
+    var formats = [
+      { label: 'MP4 H.264 · 1080p', meta: 'master del corte · 24 fps', on: true },
+      { label: 'Subtítulos .srt (es + en)', meta: 'generados del guion', on: true },
+      { label: 'Vertical 9:16 · 1080×1920', meta: 'reencuadre automático por plano', on: true },
+      { label: 'Stems de audio separados', meta: 'diálogo / SFX / música', on: false }
+    ];
+    return { tracks: tracks, ruler: ruler, formats: formats, accent: accent };
+  }
+}
+</script>
+</body>
+</html>
